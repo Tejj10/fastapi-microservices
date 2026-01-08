@@ -3,4 +3,7 @@ class HelloAPI:
         self.hello_service = hello_service
 
     def get_hello(self):
-        return {"message": self.hello_service.get_hello()}
+        print("API CALLED")
+        result = self.hello_service.get_hello()
+        print("SERVICE RETURNED:", result)
+        return {"message": result}
